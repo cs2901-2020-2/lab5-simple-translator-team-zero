@@ -1,3 +1,4 @@
+package cs.lab;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.InputStream;
@@ -17,10 +18,10 @@ public class TranslateTest {
         generic(0);
     }
 
-    @Test(invocationCount = 80, threadPoolSize = 80)
-    public void testCase1() throws Exception {
-        generic(0);
-    }
+    @Test(expectedExceptions = MaxLengthException.class)
+    public void testCase2() throws Exception{           
+        generic(2);
+    } 
 
     private void generic(int i) throws Exception {
         String input = readInput(i);

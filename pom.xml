@@ -5,16 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cs2901</groupId>
-    <artifactId>lab5</artifactId>
+    <artifactId>lab5_TeamZero</artifactId>
     <version>0.1</version>
 
     <properties>
-        <sonar.projectKey>cs2901-2020-2_lab5</sonar.projectKey>
+        <sonar.projectKey>cs2901-2020-2_lab5-simple-translator-team-zero</sonar.projectKey>
         <sonar.organization>cs2901-2020-2</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
-    </properties>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url> 
+        <sonar.login>156baddf497f3a3cc81a2ea2ec4aa149c4cf2d61</sonar.login> 
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target> 
+    </properties> 
 
     <dependencies>
         <dependency>
