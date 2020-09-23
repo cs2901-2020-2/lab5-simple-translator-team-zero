@@ -6,18 +6,15 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 public class Translate {
+    String translate(String text) throws Exception {
+        if(text.length() > 500) {
+            throw new MaxLengthException("Character Length exceeded");
+        }
 
-    public static void main(String[] args) throws IOException {
-        String text = "Hola Mundo!";
-        System.out.println("Translated text: " + translate("es", "en", text));
-    }
-
-    private static String translate(String langFrom, String langTo, String text) throws IOException {
-        // INSERT YOU URL HERE
         String urlStr = "https://script.google.com/macros/s/AKfycby7yA-le32mzRHoXZRyUInD_kNgXehqDTVW6OEtCBDbqI2cpA/exec" +
                 "?q=" + URLEncoder.encode(text, "UTF-8") +
-                "&target=" + langTo +
-                "&source=" + langFrom;
+                "&target=" + "en" +
+                "&source=" + "es";
         URL url = new URL(urlStr);
         StringBuilder response = new StringBuilder();
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
